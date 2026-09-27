@@ -1,0 +1,156 @@
+customer_code,customer,market,platform,channel
+70000000,Elite Sports,India,brick & mortar,Distributor
+70000001,  Elite Athletics ,India,brick & mortar,Distributor
+70000002,  Elite Gear ,India,E-Commerce,Retailer
+70000003,Elite Fitness,India,Wholesale,
+70000004,Elite Outdoors,India,Brick & Mortar,Direct
+70000005,Elite Hub,India,Wholesale,Retailer
+70000006,Elite Store,India,Brick & Mortar,Direct
+70000007,Elite Emporium,India,E-Commerce,Retailer
+70000008,Elite Mart,India,Brick & Mortar,Direct
+70000009,Elite Retail,India,Wholesale,Retailer
+70000010,Pro Sports,India,brick & mortar,Retailer
+70000011,  Pro Athletics ,India,Wholesale,Distributor
+70000012,  Pro Gear ,India,Wholesale,Direct
+70000013,  Pro Fitness ,India,Brick & Mortar,Distributor
+70000014,Pro Outdoors,India,Brick & Mortar,Direct
+70000015,Pro Hub,India,e-commerce,Distributor
+70000016,Pro Store,India,E-Commerce,Distributor
+70000017,Pro Emporium,India,brick & mortar,Retailer
+70000018,  Pro Mart ,India,brick & mortar,Retailer
+70000019,Pro Retail,India,E-Commerce,Retailer
+70000020,Champion Sports,India,Wholesale,Distributor
+70000021,Champion Athletics,India,e-commerce,Distributor
+70000022,Champion Gear,India,brick & mortar,Retailer
+70000023,Champion Fitness,India,E-Commerce,Distributor
+70000024,Champion Outdoors,India,Wholesale,Distributor
+70000025,Champion Hub,India,wholesale,Retailer
+70000026,Champion Store,India,Wholesale,Direct
+70000027,Champion Emporium,India,e-commerce,Direct
+70000028,Champion Mart,India,e-commerce,Direct
+70000029,Champion Retail,India,Wholesale,Retailer
+70000030,Prime Sports,India,Wholesale,Direct
+70000031,Prime Athletics,India,brick & mortar,Distributor
+70000032,Prime Gear,India,e-commerce,Retailer
+70000033,Prime Fitness,India,Brick & Mortar,Direct
+70000034,Prime Outdoors,India,E-Commerce,Retailer
+70000035,Prime Hub,India,Brick & Mortar,Distributor
+70000036,Prime Store,India,wholesale,Retailer
+70000037,Prime Emporium,India,Brick & Mortar,Retailer
+70000038,Prime Mart,India,Wholesale,Direct
+70000039,Prime Retail,India,E-Commerce,Retailer
+70000040,Titan Sports,India,Wholesale,
+70000041,Titan Athletics,India,brick & mortar,Direct
+70000042,Titan Gear,India,e-commerce,Retailer
+70000043,Titan Fitness,India,wholesale,Retailer
+70000044,Titan Outdoors,India,E-Commerce,
+70000045,Titan Hub,India,E-Commerce,Distributor
+70000046,Titan Store,India,Wholesale,Retailer
+70000047,Titan Emporium,India,Brick & Mortar,
+70000048,Titan Mart,India,Brick & Mortar,Distributor
+70000049,Titan Retail,India,Wholesale,Distributor
+70000050,  Velocity Sports ,India,e-commerce,Distributor
+70000051,Velocity Athletics,India,Brick & Mortar,Distributor
+70000052,Velocity Gear,India,e-commerce,Distributor
+70000053,Velocity Fitness,India,Wholesale,Distributor
+70000054,Velocity Outdoors,India,brick & mortar,Direct
+70000055,  Velocity Hub ,India,Wholesale,Direct
+70000056,Velocity Store,India,E-Commerce,Distributor
+70000057,Velocity Emporium,India,E-Commerce,
+70000058,Velocity Mart,India,E-Commerce,Direct
+70000059,Velocity Retail,India,Wholesale,Retailer
+70000060,Active Sports,India,Wholesale,
+70000061,Active Athletics,India,E-Commerce,Distributor
+70000062,Active Gear,India,brick & mortar,Retailer
+70000063,  Active Fitness ,India,E-Commerce,Direct
+70000064,  Active Outdoors ,India,wholesale,Direct
+70000065,  Active Hub ,India,Brick & Mortar,Direct
+70000066,Active Store,India,E-Commerce,Distributor
+70000067,  Active Emporium ,India,Brick & Mortar,Retailer
+70000068,Active Mart,India,Wholesale,Direct
+70000069,Active Retail,India,Wholesale,Distributor
+70000070,Dynamic Sports,India,e-commerce,Retailer
+70000071,Dynamic Athletics,India,Wholesale,Direct
+70000072,Dynamic Gear,India,Brick & Mortar,Retailer
+70000073,Dynamic Fitness,India,wholesale,Retailer
+70000074,Dynamic Outdoors,India,Brick & Mortar,Direct
+70000075,Dynamic Hub,India,wholesale,Direct
+70000076,  Dynamic Store ,India,brick & mortar,Distributor
+70000077,Dynamic Emporium,India,Brick & Mortar,Direct
+70000078,Dynamic Mart,India,Brick & Mortar,Direct
+70000079,  Dynamic Retail ,India,E-Commerce,Direct
+70000080,Global Sports,India,Wholesale,Direct
+70000081,Global Athletics,India,Wholesale,Direct
+70000082,Global Gear,India,wholesale,Direct
+70000083,Global Fitness,India,e-commerce,Retailer
+70000084,  Global Outdoors ,India,Wholesale,Retailer
+70000085,Global Hub,India,Wholesale,Retailer
+70000086,  Global Store ,India,Wholesale,Retailer
+70000087,  Global Emporium ,India,Wholesale,Direct
+70000088,Global Mart,India,Brick & Mortar,Direct
+70000089,Global Retail,India,e-commerce,Direct
+70000090,National Sports,India,e-commerce,Distributor
+70000091,  National Athletics ,India,Brick & Mortar,Retailer
+70000092,National Gear,India,Wholesale,Distributor
+70000093,National Fitness,India,e-commerce,Direct
+70000094,National Outdoors,India,E-Commerce,Direct
+70000095,National Hub,India,wholesale,Retailer
+70000096,National Store,India,E-Commerce,Retailer
+70000097,National Emporium,India,e-commerce,Distributor
+70000098,National Mart,India,E-Commerce,Distributor
+70000099,National Retail,India,E-Commerce,Direct
+70000100,Urban Sports,India,Wholesale,Distributor
+70000101,Urban Athletics,India,e-commerce,Direct
+70000102,Urban Gear,India,wholesale,
+70000103,  Urban Fitness ,India,E-Commerce,Direct
+70000104,Urban Outdoors,India,e-commerce,Distributor
+70000105,Urban Hub,India,Wholesale,Distributor
+70000106,Urban Store,India,Brick & Mortar,Distributor
+70000107,Urban Emporium,India,Brick & Mortar,Distributor
+70000108,Urban Mart,India,Wholesale,Distributor
+70000109,Urban Retail,India,Wholesale,Retailer
+70000110,Metro Sports,India,E-Commerce,Retailer
+70000111,  Metro Athletics ,India,Wholesale,Distributor
+70000112,  Metro Gear ,India,Wholesale,Retailer
+70000113,Metro Fitness,India,Wholesale,
+70000114,Metro Outdoors,India,Brick & Mortar,Direct
+70000115,Metro Hub,India,Wholesale,Distributor
+70000116,Metro Store,India,Brick & Mortar,Direct
+70000117,Metro Emporium,India,Wholesale,Retailer
+70000118,Metro Mart,India,Brick & Mortar,Distributor
+70000119,Metro Retail,India,e-commerce,Distributor
+70000120,NextGen Sports,India,Wholesale,Retailer
+70000121,NextGen Athletics,India,e-commerce,Direct
+70000122,NextGen Gear,India,e-commerce,Distributor
+70000123,  NextGen Fitness ,India,E-Commerce,Retailer
+70000124,NextGen Outdoors,India,Brick & Mortar,Distributor
+70000125,NextGen Hub,India,brick & mortar,Retailer
+70000126,NextGen Store,India,Brick & Mortar,
+70000127,  NextGen Emporium ,India,wholesale,Direct
+70000128,NextGen Mart,India,wholesale,Direct
+70000129,  NextGen Retail ,India,Wholesale,Distributor
+70000130,  Supreme Sports ,India,E-Commerce,Direct
+70000131,Supreme Athletics,India,brick & mortar,Distributor
+70000132,Supreme Gear,India,Wholesale,Distributor
+70000133,Supreme Fitness,India,E-Commerce,
+70000134,Supreme Outdoors,India,wholesale,Direct
+70000135,Supreme Hub,India,Wholesale,Distributor
+70000136,Supreme Store,India,Brick & Mortar,Retailer
+70000137,Supreme Emporium,India,Brick & Mortar,Retailer
+70000138,Supreme Mart,India,wholesale,Direct
+70000139,  Supreme Retail ,India,E-Commerce,Direct
+70000140,Alpha Sports,India,brick & mortar,Direct
+70000141,Alpha Athletics,India,E-Commerce,
+70000142,Alpha Gear,India,Wholesale,Retailer
+70000143,  Alpha Fitness ,India,Brick & Mortar,Distributor
+70000144,Alpha Outdoors,India,brick & mortar,Distributor
+70000145,Alpha Hub,India,e-commerce,
+70000146,Alpha Store,India,E-Commerce,Distributor
+70000147,  Alpha Emporium ,India,brick & mortar,Retailer
+70000148,Alpha Mart,India,Wholesale,Retailer
+70000149,Alpha Retail,India,Wholesale,Distributor
+70000063,  Active Fitness ,India,E-Commerce,Direct
+70000050,  Velocity Sports ,India,e-commerce,Distributor
+70000059,Velocity Retail,India,Wholesale,Retailer
+70000104,Urban Outdoors,India,e-commerce,Distributor
+70000022,Champion Gear,India,brick & mortar,Retailer
