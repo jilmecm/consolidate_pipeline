@@ -20,8 +20,7 @@ Los datos se organizaron de forma lógica y segura utilizando catálogos y esque
 *   🥈 **Capa Silver (`silver_parent` / `silver_child`):** Datos limpios, filtrados y estandarizados. Aquí se manejó la imputación de valores nulos y la corrección de anomalías en los IDs de clientes (generación de *Dummy Records*).
 *   🥇 **Capa Gold (`gold`):** Modelo dimensional consolidado (Star Schema) listo para el consumo de BI.
 
-> **[Insertar imagen: Estructura del Catálogo.png]**
-*(Captura del Catalog Explorer mostrando los esquemas bronze, silver y gold).*
+![Estrutura catálogo](images/Estructura_del_Catálogo.png)
 
 ---
 
@@ -29,16 +28,14 @@ Los datos se organizaron de forma lógica y segura utilizando catálogos y esque
 
 Para optimizar los tiempos de cómputo y los costos en la nube, el flujo de trabajo fue diseñado con **procesamiento paralelo** para las dimensiones independientes, convergiendo en nodos secuenciales para las tablas de hechos y la consolidación final.
 
-> **[Insertar imagen: Graph - Pipelines.png]**
-*(Captura del DAG de Databricks Workflows).*
+![Graph - Pipelines](images/Graph_Pipelines.png)
 
 *   **Fase 1 (Extracción y Limpieza Paralela):** Procesamiento simultáneo de clientes, productos y precios tanto para la empresa matriz como para la subsidiaria.
 *   **Fase 2 (Validación de Hechos):** Carga incremental de las órdenes de venta (`fact_orders`) asegurando que las dimensiones maestras ya estén disponibles.
 *   **Fase 3 (Consolidación Gold):** Unificación de ambas empresas mediante operaciones `MERGE` (Upserts) en tablas Delta, evitando duplicidades.
 *   **Fase 4 (BI Automático):** Tarea final automatizada para refrescar el Dashboard (`9_refresh_dashboard`) solo cuando los datos superaron todas las validaciones.
 
-> **[Insertar imagen: Timeline - Pipeline.png]**
-*(Captura del Gantt chart mostrando el paralelismo y los tiempos de ejecución).*
+![Timeline - Pipeline](images/Timeline_Pipeline.png)
 
 ---
 
@@ -48,8 +45,7 @@ El modelo de datos final expuesto a la capa de negocios es un **Modelo en Estrel
 
 Se implementó un rastreo estricto de linaje de datos para garantizar la observabilidad y permitir auditorías rápidas sobre el origen de cualquier métrica.
 
-> **[Insertar imagen: Data Lineage - Graph.jpg o Data Lineage - List.png]**
-*(Captura del linaje mostrando cómo parent_fact_orders y child_fact_orders alimentan la tabla final).*
+![Data Lineage Graph](images/Data_Lineage_Graph.png)
 
 ### 🛠️ Desafío Técnico Destacado: Integridad Referencial
 Durante la ingesta, la subsidiaria presentaba ventas con IDs de clientes nulos o inválidos. Para evitar la pérdida de facturación en el cálculo del *Total Revenue* del Dashboard, se implementó la inyección automatizada de un **Registro Ficticio (Dummy Record: 999999)** en la capa Silver. Esto garantizó una relación perfecta de 1 a N (Modelo Estrella) sin valores huérfanos, etiquetando los errores para visibilidad del equipo de calidad de datos.
@@ -63,8 +59,7 @@ Todas las tablas fueron creadas bajo el formato **Delta Lake**, aprovechando el 
 *   Control de versiones de los datos (*Time Travel*).
 *   Monitoreo de operaciones `MERGE` y `CREATE OR REPLACE TABLE`.
 
-> **[Insertar imagen: History data.png]**
-*(Captura del historial de la tabla 4_fact_orders mostrando las versiones).*
+![History data](images/History_data.png)
 
 ---
 
@@ -78,8 +73,9 @@ El pipeline culmina en un panel de control automatizado que permite a los *stake
 *   Clientes Únicos.
 *   Distribución de ingresos por canal y tendencia mensual.
 
-> **[Insertar imagen: Captura de tu Dashboard en PDF/Lakeview]**
-*(Aquí pondremos la captura de tu dashboard final con las tarjetas y gráficos).*
+[![Vista previa del Dashboard](images/atlone_enterprise_images.png)](3_dashboards/atlone_enterprise.pdf)
+
+> [📥 Haz clic aquí para ver el Dashboard completo con todos los KPIs en formato PDF](3_dashboards/atlone_enterprise.pdf)
 
 ---
 **Tecnologías Utilizadas:**
