@@ -11,6 +11,37 @@ El objetivo principal fue unificar las ventas y métricas operativas de la empre
 
 El pipeline fue construido utilizando el estándar de la industria **Medallion Architecture** dentro del ecosistema de Databricks, garantizando escalabilidad y calidad de datos.
 
+```mermaid
+graph LR
+    subgraph AWS Cloud
+        S3[(S3: Raw Data)]
+    end
+
+    subgraph Databricks [Databricks Data Intelligence Platform]
+        direction LR
+        subgraph Medallion Architecture
+            B[🥉 Bronze Layer] --> S1[🥈 Silver: Atlone]
+            B --> S2[🥈 Silver: SportsBar]
+            
+            S1 --> G[🥇 Gold Layer]
+            S2 -->|Merge & Dummy Record| G
+        end
+    end
+
+    subgraph Serving Layer
+        BI[📊 Databricks Dashboard]
+    end
+
+    S3 -->|Lakeflow / Auto Loader| B
+    G -->|Star Schema| BI
+
+    style S3 fill:#FF9900,stroke:#232F3E,stroke-width:2px,color:white
+    style B fill:#CD7F32,stroke:#333,stroke-width:2px,color:white
+    style S1 fill:#C0C0C0,stroke:#333,stroke-width:2px,color:black
+    style S2 fill:#C0C0C0,stroke:#333,stroke-width:2px,color:black
+    style G fill:#FFD700,stroke:#333,stroke-width:2px,color:black
+    style BI fill:#FF3621,stroke:#333,stroke-width:2px,color:white
+```
 > **[Insertar imagen: Diagrama de Arquitectura - Crear en draw.io o similar]**
 *(Nota: Aquí irá el diagrama visual de cómo fluyen los datos desde los CSV/Sistemas origen hasta el Dashboard).*
 
