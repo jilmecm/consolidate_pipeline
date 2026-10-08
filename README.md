@@ -11,39 +11,7 @@ El objetivo principal fue unificar las ventas y métricas operativas de la empre
 
 El pipeline fue construido utilizando el estándar de la industria **Medallion Architecture** dentro del ecosistema de Databricks, garantizando escalabilidad y calidad de datos.
 
-```mermaid
-graph LR
-    subgraph AWS Cloud
-        S3[(S3: Raw Data)]
-    end
-
-    subgraph Databricks [Databricks Data Intelligence Platform]
-        direction LR
-        subgraph Medallion Architecture
-            B[🥉 Bronze Layer] --> S1[🥈 Silver: Atlone]
-            B --> S2[🥈 Silver: SportsBar]
-            
-            S1 --> G[🥇 Gold Layer]
-            S2 -->|Merge & Dummy Record| G
-        end
-    end
-
-    subgraph Serving Layer
-        BI[📊 Databricks Dashboard]
-    end
-
-    S3 -->|Lakeflow / Auto Loader| B
-    G -->|Star Schema| BI
-
-    style S3 fill:#FF9900,stroke:#232F3E,stroke-width:2px,color:white
-    style B fill:#CD7F32,stroke:#333,stroke-width:2px,color:white
-    style S1 fill:#C0C0C0,stroke:#333,stroke-width:2px,color:black
-    style S2 fill:#C0C0C0,stroke:#333,stroke-width:2px,color:black
-    style G fill:#FFD700,stroke:#333,stroke-width:2px,color:black
-    style BI fill:#FF3621,stroke:#333,stroke-width:2px,color:white
-```
-> **[Insertar imagen: Diagrama de Arquitectura - Crear en draw.io o similar]**
-*(Nota: Aquí irá el diagrama visual de cómo fluyen los datos desde los CSV/Sistemas origen hasta el Dashboard).*
+![Diagrama de Arquitectur](images/medallion.jpg)
 
 ### Estructura del Catálogo (Unity Catalog)
 Los datos se organizaron de forma lógica y segura utilizando catálogos y esquemas separados:
@@ -109,5 +77,13 @@ El pipeline culmina en un panel de control automatizado que permite a los *stake
 > [📥 Haz clic aquí para ver el Dashboard completo con todos los KPIs en formato PDF](3_dashboards/atlone_enterprise.pdf)
 
 ---
-**Tecnologías Utilizadas:**
-`Apache Spark (PySpark)` | `Databricks (Workflows, Unity Catalog)` | `Delta Lake` | `SQL` | `Data Modeling (Star Schema)` | `Business Intelligence`
+## 🛠️ Tecnologías y Herramientas Utilizadas
+
+El pipeline fue diseñado e implementado utilizando un *stack* moderno de ingeniería de datos, enfocado en el rendimiento computacional, transacciones ACID y un estricto gobierno de la información:
+
+* **Lenguajes & Frameworks:** `Python` | `Apache Spark (PySpark)` | `SQL`
+* **Infraestructura & Plataforma:** `Databricks Data Intelligence Platform` | `AWS S3` (Ingesta Raw)
+* **Arquitectura & Almacenamiento:** `Medallion Architecture` (Bronze, Silver, Gold) | `Delta Lake`
+* **Gobierno de Datos & Orquestación:** `Unity Catalog` | `Databricks Workflows`
+* **Técnicas de Ingeniería:** Procesamiento en Paralelo | `MERGE` Upserts | Integridad Referencial (Dummy Records)
+* **Modelado & Visualización:** `Data Modeling (Star Schema)` | `Databricks Lakeview Dashboards`
